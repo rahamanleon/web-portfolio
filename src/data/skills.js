@@ -34,7 +34,7 @@ export const skillGroups = [
     id: 'ai',
     title: 'AI & integrations',
     items: [
-      { name: 'Groq / LLM APIs', note: 'Chat completions and tool calling' },
+      { name: 'LLM APIs', note: 'OpenAI-compatible chat endpoints' },
       { name: 'Provider routing', note: 'Failover, rate tracking, fallbacks' },
       { name: 'Audio DSP', note: 'FFT fingerprinting with fft.js' },
     ],
@@ -46,7 +46,7 @@ export const skillGroups = [
       { name: 'Git & GitHub', note: 'Version control and Actions workflow' },
       { name: 'Vitest', note: 'Unit and integration tests' },
       { name: 'Docker', note: 'Containerised API deployment' },
-      { name: 'Render', note: 'Deployments for Dora and World Cup' },
+      { name: 'Render', note: 'Deployed APIs on Render' },
     ],
   },
 ]

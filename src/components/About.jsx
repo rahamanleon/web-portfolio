@@ -22,7 +22,7 @@ export default function About() {
           <Reveal delay={0.18}>
             <blockquote className="mt-4 border-l-2 border-ember-500 pl-5">
               <p className="font-display text-2xl leading-snug text-bone-100 sm:text-3xl">
-                The unglamorous layer decides whether an agent actually works.
+                The unglamorous layer decides whether a system actually works.
               </p>
             </blockquote>
           </Reveal>

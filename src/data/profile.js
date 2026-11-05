@@ -12,11 +12,11 @@ export const profile = {
   headlineAccent: 'AI tools, APIs,',
   headlineTail: 'and automation systems.',
   intro:
-    'Full-stack developer working across Node.js, React and data-heavy backends. I ship AI agents, production REST APIs and the tooling that keeps them running.',
+    'Full-stack developer working across Node.js, React and data-heavy backends. I ship production REST APIs, AI tooling and the glue that keeps them running.',
   about: [
     'I build AI tools, open-source APIs and automation systems, based in Rajshahi, Bangladesh. Most of my work sits where LLM integration meets the backend that has to make it dependable.',
-    'What I have published is small but deliberate: an AI agent API with persistent memory and runtime-loaded skills, and a World Cup REST API shaped like a real production service, with migrations, seeders, caching and Docker.',
-    'The through-line is infrastructure for AI. Providers, routing, memory and tools are the parts I enjoy most: the unglamorous layer that decides whether an agent actually works.',
+    'What I have published is small but deliberate: an audio-recognition REST API built on an FFT fingerprinting core, and an OpenAI-compatible LLM proxy layered on top of an upstream project.',
+    'The through-line is infrastructure for AI. Providers, routing and the unglamorous plumbing are the parts I enjoy most: the layer that decides whether a system actually works.',
   ],
   principles: [
     'Make the system easy to reason about.',
@@ -28,7 +28,7 @@ export const profile = {
     { label: 'Based in', value: 'Rajshahi, Bangladesh' },
     { label: 'Focus', value: 'AI tools & backend APIs' },
     { label: 'Core stack', value: 'Node.js · React · MongoDB' },
-    { label: 'Currently', value: 'Building AI agents & APIs' },
+    { label: 'Currently', value: 'Building AI tooling & APIs' },
   ],
 }
 
