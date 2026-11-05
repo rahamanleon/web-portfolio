@@ -1,0 +1,361 @@
+Skip to content
+
+RLRahaman LeonFull-Stack Developer
+
+- About
+
+- Capabilities
+
+- Work
+
+- Activity
+
+- Contact
+
+Get in touch
+
+Open to new work
+
+# I buildAI tools, APIs,and automation systems.
+
+Full-stack developer working across Node.js, React and data-heavy backends. I ship AI agents, production REST APIs and the tooling that keeps them running.
+
+See the work GitHub
+
+Dossier
+
+Based inRajshahi, Bangladesh
+
+FocusAI tools & backend APIs
+
+Core stackNode.js · React · MongoDB
+
+CurrentlyBuilding AI agents & APIs
+
+github.com/rahamanleon rahamanleon16@gmail.com
+
+JavaScriptTypeScriptNode.jsExpressReactMongoDBPostgreSQLSQLiteTailwind CSSVitestDockerDrizzleJavaScriptTypeScriptNode.jsExpressReactMongoDBPostgreSQLSQLiteTailwind CSSVitestDockerDrizzle
+
+01About
+
+## Infrastructure for AI, built to be understood.
+
+I build AI tools, open-source APIs and automation systems, based in Rajshahi, Bangladesh. Most of my work sits where LLM integration meets the backend that has to make it dependable.
+
+What I have published is small but deliberate: an AI agent API with persistent memory and runtime-loaded skills, and a World Cup REST API shaped like a real production service, with migrations, seeders, caching and Docker.
+
+The through-line is infrastructure for AI. Providers, routing, memory and tools are the parts I enjoy most: the unglamorous layer that decides whether an agent actually works.
+
+The unglamorous layer decides whether an agent actually works.
+
+Principles
+
+- 01Make the system easy to reason about.
+
+- 02Ship the whole thing: migrations, seeds, deployment.
+
+- 03Treat provider limits as architecture, not an afterthought.
+
+- 04Prove it runs, not just that it compiles.
+
+Based in
+
+Rajshahi, Bangladesh
+
+Open to new work
+
+02Capabilities
+
+## The stack I actually use.
+
+Every technology below appears in a repository I have published. Nothing here is a résumé keyword.
+
+### Languages & runtime
+
+- 01JavaScriptNode.js services, APIs and tooling
+
+- 02TypeScriptTyped server and React client
+
+- 03Node.jsRuntime behind every backend here
+
+### Backend & data
+
+- 01ExpressREST APIs, middleware and validation
+
+- 02MongoDB / MongooseAgent memory and document data
+
+- 03PostgreSQLRelational modelling and migrations
+
+- 04SQLite / DrizzleEmbedded storage with a typed ORM
+
+### Frontend
+
+- 01ReactComponent architecture and hooks
+
+- 02ViteDev server and production builds
+
+- 03Tailwind CSSUtility-first UI systems
+
+### AI & integrations
+
+- 01Groq / LLM APIsChat completions and tool calling
+
+- 02Provider routingFailover, rate tracking, fallbacks
+
+- 03Audio DSPFFT fingerprinting with fft.js
+
+### Tooling
+
+- 01Git & GitHubVersion control and Actions workflow
+
+- 02VitestUnit and integration tests
+
+- 03DockerContainerised API deployment
+
+- 04RenderDeployments for Dora and World Cup
+
+03Selected work
+
+## Two things I built end to end.
+
+The projects below are verified original work. Further down, open-source and upstream projects carry explicit attribution.
+
+01AI Agent API · 2026Live
+
+### Dora AI
+
+An AI agent API with memory, web tools and runtime-loaded skills.
+
+A lightweight agent REST API powered by Groq. It keeps persistent per-user memory in MongoDB, exposes web search, URL fetching and image generation as tools, and loads new skills at runtime without a restart.
+
+- MongoDB-backed memory persists across sessions.
+
+- Web search, URL fetch and image generation as callable tools.
+
+- Skills are hot-loaded from files at runtime.
+
+- Ships with a small web chat UI and a Render blueprint.
+
+- Node.js
+
+- Express
+
+- MongoDB
+
+- Mongoose
+
+- Groq
+
+- axios
+
+- cheerio
+
+Live SourceEarlier iteration
+
+dora-ai-api / chat live
+
+Summarise the latest results and remember my preferences.
+
+Searching the web, then updating your saved memory.
+
+web_searchfetch_urlmemory
+
+Interface sketch · src/{controllers,models,routes,services,skills}, public/ chat UI, three public gists
+
+02REST API · 2026Deployed
+
+### World Cup API v2
+
+A production-shaped REST API for World Cup history and live scores.
+
+A Node.js API backed by PostgreSQL: tournaments, teams, matches, standings, groups and search. Migrations, an idempotent seeder, bearer-auth admin routes, an in-memory cache and Docker support.
+
+- PostgreSQL schema with SQL migrations and a re-runnable seeder.
+
+- Repository + provider layers behind Express controllers.
+
+- Bearer-token admin routes for ingest and cache flush.
+
+- Dockerfile, Render blueprint and a smoke-test script.
+
+- Node.js
+
+- Express
+
+- PostgreSQL
+
+- express-validator
+
+- Docker
+
+Live Source
+
+worldcup-api-v2 postgres
+
+GET/api/v1/matches?year=2022&stage=final
+
+200application/json · cached
+
+```
+{  "data": [{    "home": "Argentina",    "away": "France",    "score": "3-3",    "penalties": "4-2"  }],  "meta": { "page": 1, "total": 64 }}
+```
+
+Interface sketch · src/{controllers,repositories,providers,middleware,routes}, migrations/, seeds/, Dockerfile
+
+Open source & references
+
+03
+
+### Shazam API
+
+Audio Recognition APIDerivative
+
+A REST wrapper around an FFT-based audio fingerprinting pipeline. Upload a short clip and receive the matched title, artist, album and artwork.
+
+Built on an existing fingerprinting core. The REST API layer and later work are by Rahaman Leon.
+
+- Node.js
+
+- Express
+
+- fft.js
+
+- fluent-ffmpeg
+
+- multer
+
+Source
+
+04
+
+### FreeLLMAPI
+
+LLM ProxyUpstream project
+
+A proxy exposing a single /v1/chat/completions endpoint over multiple free-tier providers, with routing, automatic failover, per-key rate tracking and an admin dashboard.
+
+Based on tashfeenahmed/freellmapi. This repository layers additional commits on top of the upstream project. View upstream
+
+- TypeScript
+
+- Express 5
+
+- React 19
+
+- Vite
+
+- Tailwind
+
+- SQLite
+
+- MongoDB
+
+- Vitest
+
+Source
+
+04Activity
+
+## What I've been building.
+
+A timeline drawn from public commit history. It is project activity, not a résumé.
+
+-
+
+2026.07
+
+### World Cup API v2
+
+A production-shaped REST API: PostgreSQL migrations, idempotent seeds, repository/provider layers, Docker and a Render deployment.
+
+- Express
+
+- PostgreSQL
+
+- Docker
+
+-
+
+2026.06
+
+### Dora AI — agent iteration
+
+A second repository expanding the agent: additional tools, a web chat surface and deployment config.
+
+- Node.js
+
+- MongoDB
+
+- Groq
+
+-
+
+2026.05
+
+### Shazam API
+
+REST API layer around an FFT audio-fingerprinting pipeline, plus documentation and a deploy blueprint.
+
+- Express
+
+- fft.js
+
+- ffmpeg
+
+-
+
+2026.04
+
+### Dora AI
+
+First commit of the AI agent API: persistent memory, web search and fetch tools, runtime skill loading.
+
+- Node.js
+
+- MongoDB
+
+- LLM
+
+Current focus
+
+- 01LLM integration and agent tooling
+
+- 02REST API design and provider fallback
+
+- 03MongoDB and PostgreSQL data modelling
+
+- 04Deployment with Docker and Render
+
+Note
+
+Dates come from repository creation and commit timestamps. No employment history is claimed because none is publicly verifiable.
+
+05Contact
+
+## Let's build something worth shipping.
+
+Have a project in mind, a role to fill, or just want to talk through an idea? The inbox is open. I usually reply within a day.
+
+rahamanleon16@gmail.com
+
+Send an emailCopy address
+
+Elsewhere
+
+- GitHub@rahamanleon
+
+- Emailrahamanleon16@gmail.com
+
+Based in
+
+Rajshahi, Bangladesh
+
+Open to remote work
+
+RL
+
+Rahaman Leon
+
+© 2026 · Built with React and Tailwind
+
+AboutCapabilitiesWorkActivityContact

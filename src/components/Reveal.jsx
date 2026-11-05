@@ -1,0 +1,31 @@
+import { motion, useReducedMotion } from 'framer-motion'
+
+const EASE = [0.22, 1, 0.36, 1]
+
+export default function Reveal({
+  children,
+  delay = 0,
+  y = 22,
+  className = '',
+  as = 'div',
+  once = true,
+}) {
+  const reduce = useReducedMotion()
+  const Tag = motion[as] ?? motion.div
+
+  if (reduce) {
+    return <Tag className={className}>{children}</Tag>
+  }
+
+  return (
+    <Tag
+      className={className}
+      initial={{ opacity: 0, y }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once, margin: '-70px' }}
+      transition={{ duration: 0.65, delay, ease: EASE }}
+    >
+      {children}
+    </Tag>
+  )
+}
